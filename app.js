@@ -24,7 +24,7 @@ app.get('*',function(req,res){
     res.sendFile(path.join(__dirname,'./client/build/index.html' ));
 });
 
-const port = 8005;
+const port = process.env.PORT || 8005;
 
 app.listen(port,()=>{
     console.log(`server is running on port number ${port}`);
